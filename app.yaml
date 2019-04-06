@@ -1,0 +1,17 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /admin/.*
+  script: main.app
+  secure: always
+  login: admin
+
+- url: /.*
+  script: main.app
+  secure: always
+
+
+builtins:
+- deferred: on
